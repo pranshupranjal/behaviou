@@ -206,6 +206,7 @@ for(i=0;i<len;i++)
 }
 //Submit button function
 function sbtgnt(){
+    var unfilled=0;
     for(i=0;i<len;i++)
     {
         var e = document.getElementById(`${"testassess"+i}`);
@@ -215,11 +216,16 @@ function sbtgnt(){
             toolans.push(strUser); //Append in the array
         }
         else{
+            e.setAttribute("style","background-color: yellow;");
+            unfilled=1;
+        }
+    }
+    if(unfilled=1)
+        {
             toolans.length=0; //Empty the array.
             alert("Please answer all the questions."); //Raise alert to select all answers before submitting.
             return; //Stop the execution of the function itself.
         }
-    }
     // // Print the array
     // toolans.forEach(function(item, index, array) {
     //     console.log(item, index);
@@ -274,37 +280,17 @@ function fmbtn()
 {   
     // Get the values entered in the form
     var email=document.getElementById("email").value;
-    var radios = document.getElementsByName('gender');
-    for (var i = 0, length = radios.length; i < length; i++) //Iterate through all the radio buttons
-    {
-        if (radios[i].checked) //Find the one which is selected
-        {
-            var gender=radios[i].value; //Store the value
-            break;
-        }
-        else{
-            var gender=0;
-        }
-    }
-    var location=document.getElementById("location").value;
-    var age=document.getElementById("age").value;
-    var dfunction=document.getElementById("dfunction").value;
-    var designation=document.getElementById("designation").value;
     // Check if all fields are filled
-    if(email.length==0 || gender==0 || age.length==0 || location.length==0 || dfunction.length==0 || designation.length==0)
+    if(email.length==0)
     {
-        alert("Fill all the fields before starting the test.");
-        return true;
-    }
-    //Validate Age
-    if(age<18)
-    {
-        alert("Age must be greater than 18 years.");
+        alert("Fill your email before starting the test.");
         return true;
     }
     // Validate Email
-    if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
+    // if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))  // Valdiate any domain
+    if (!/^\"?[\w-_\.]*\"?@timesgroup\.com$/.test(email)) //Validate only timegroup domain
     {
+        
       alert("You have entered an invalid email address!");
       return true;
     }
@@ -312,7 +298,7 @@ function fmbtn()
     document.getElementById("overall").style.display="none";
     // Show the Table
     document.getElementById("maincontent").style.display="grid";
-    
+
 }
 
 

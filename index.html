@@ -1,60 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Behavioural Test</title>
+	<title>CLASIC Strength finder</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="Assets/css/main.css">
 </head>
 <body>
-	<h1 class="nonselect">Behavioural Test</h1>
+	<img src="Assets/logo.jpg" alt="Logo" id="logo">
+	<h1 class="nonselect">CLASIC Strength finder</h1>
 <br>
 <div id="overall">
 <div class="container">
-        <!-- <form> -->
-            <div class="row">
-                <div class="col-3 col-lg-1 label-form nonselect"><strong>Email:</strong></div>
-                <div class="col"><input type="text" id="email" placeholder="abc@timesgroup.com" required></div>
-                <div class="w-100"></div>
-                <div class="col-3 col-lg-1 label-form nonselect"><strong>Gender:</strong></div>
-                <div class="col">
-                    <input type="radio" name="gender" value="male" > Male <input type="radio" name="gender" value="female"> Female <input type="radio" name="gender" value="other"> Other
-                </div>
-                <div class="w-100"></div>
-                <div class="col-3 col-lg-1 label-form nonselect"><strong>Location:</strong></div>
-                <div class="col"><input type="text" id="location" placeholder="Name of City"></div>
-                <div class="w-100"></div>
-                <div class="col-3 col-lg-1 label-form nonselect"><strong>Age:</strong></div>
-                <div class="col"><input type="number" id="age" min="18" placeholder="In years"></div>
-                <div class="w-100"></div>
-                <div class="col-3 col-lg-1 label-form nonselect"><strong>Function:</strong></div>
-                <div class="col"><input type="text" id="dfunction" placeholder="What do you do?"></div>
-                <div class="w-100"></div>
-                <div class="col-3 col-lg-1 label-form nonselect"><strong>Designation:</strong></div>
-                <div class="col"><input type="text" id="designation" placeholder="Manager/Project Lead"></div>
-                <div class="w-100"></div>
-                <div class="col-lg-1 offset-lg-5 col-1 offset-4">
-                        <button class="btn btn-success" id="loginbtnsbmt" onclick="fmbtn();">Start the Test</button>
-                </div>
-            </div>
-        <!-- </form> -->
-    </div>
-    <div id="note" class="nonselect">
-       	<h5 id="noteheading">Note:</h5>
-	    <ul>
-            <li>This strenghfinder will  take <strong>10 minutes</strong>  to complete. You are required to indicate how strongly you agree or disagree with a set of behavioural statements.</li>
-            <li>This assessor will help you discover your dominant core values, hence choosing neutral statements may not reflect the true values you stand for.</li>
-            <li>Answer the questions quickly, from your “gut” or “heart.” <strong>There are no right or wrong answers.</strong> Your first response is usually the most  authentically you, so don’t overthink the answers.</li>
-            <li>Remember to take the assessment as your <strong>natural self</strong>. Do not answer how you wish you were or how you think others at work or at home want you to be. Be true to who you are. </li>
-            <li>When in doubt, Use work scenarios as a reference to  validate your choice</li>
-    	</ul>
-	</div>
+            <div class="row" id="mainform">
+					<div class="col-2 col-lg-1 label-form nonselect"><strong>Email:</strong></div>
+					<div class="col"><input type="text" id="email" placeholder="abc@timesgroup.com" required></div>
+			</div>
+			<div class="row">
+				<div id="note" class="nonselect">
+					<h5 id="noteheading">Note:</h5>
+				    <ul>
+						<li>This strenghfinder will  take <strong>10 minutes</strong>  to complete. You are required to indicate how strongly you agree or disagree with a set of behavioural statements.</li>
+						<li>This assessor will help you discover your dominant core values, hence choosing neutral statements may not reflect the true values you stand for.</li>
+						<li>Answer the questions quickly, from your “gut” or “heart.” <strong>There are no right or wrong answers.</strong> Your first response is usually the most  authentically you, so don’t overthink the answers.</li>
+						<li>Remember to take the assessment as your <strong>natural self</strong>. Do not answer how you wish you were or how you think others at work or at home want you to be. Be true to who you are. </li>
+						<li>When in doubt, Use work scenarios as a reference to  validate your choice</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-1 offset-lg-5 col-1 offset-4">
+					<button class="btn btn-success" id="loginbtnsbmt" onclick="fmbtn();">Start the Test</button>
+				</div>
+			</div>
+</div>
+    
 </div>
 <div id="maincontent">
 	<h6>Please indicate how strongly you agree or disagree with the following statements using the drop down menu</h6>
 	<br>
-	<form id="Softskills">
+	<!-- <form id="Softskills"> -->
 	<table id="disp_table" class="table-hover">
 	<thead class="thead-dark">
 		<th>S.No</th>
@@ -63,7 +49,7 @@
 	</thead>
 	<tbody></tbody>
 	</table>
-	</form>
+	<!-- </form> -->
 	<br>
 	<!-- Submit Button -->
 	<div class="mx-auto" id="btnarea">
