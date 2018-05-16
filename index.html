@@ -4,10 +4,12 @@
 	<title>CLASIC Strength finder</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="icon" type="image/jpg" href="Assets/logo.jpg" sizes="16x16">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="Assets/css/main.css">
 </head>
 <body>
+	<!-- If you are interested in the source code visit https://github.com/pranshupranjal/behaviour -->
 	<img src="Assets/logo.jpg" alt="Logo" id="logo">
 	<h1 class="nonselect">CLASIC Strength finder</h1>
 <br>
@@ -26,6 +28,7 @@
 						<li>Answer the questions quickly, from your “gut” or “heart.” <strong>There are no right or wrong answers.</strong> Your first response is usually the most  authentically you, so don’t overthink the answers.</li>
 						<li>Remember to take the assessment as your <strong>natural self</strong>. Do not answer how you wish you were or how you think others at work or at home want you to be. Be true to who you are. </li>
 						<li>When in doubt, Use work scenarios as a reference to  validate your choice</li>
+						<li>Don't refresh the page while giving the strengthfinder test.</li>
 					</ul>
 				</div>
 			</div>
@@ -50,32 +53,58 @@
 	<tbody></tbody>
 	</table>
 	<!-- </form> -->
+	<div id="excitearea">
+	<label for="excite"><strong>List top 3 elements that make you excited about working in BCCL:</strong></label>
 	<br>
+	<textarea id="excite" rows="4" cols="50" placeholder="This is not mandatory"></textarea>
+	</div>
 	<!-- Submit Button -->
 	<div class="mx-auto" id="btnarea">
-	<input class="btn btn-primary btn-lg" type="submit" value="Submit" id="sbbtn" onclick="sbtgnt()">
+		<input class="btn btn-primary btn-lg" type="submit" value="Submit" id="sbbtn" onclick="sbtgnt()">
 	</div>
 </div>
 <!-- Output behaviour values -->
 <div id="outputbehaviour">
-	<div class="heading">Innovation</div>
+	<div class="headingmain">CLASIC Core Values that you highly identify with</div>
+	<div class="headingsub" id="moreheading">Looks like you need to change some of your habits.</div>
+	<div class="heading" id="headoutput0">Innovation</div>
 		<div class="outputcontent" id="output0"></div>
-	<div class="heading">Accountability</div>
+	<div class="heading" id="headoutput1">Accountability</div>
 		<div class="outputcontent" id="output1"></div>
-	<div class="heading">Collaboration</div>
+	<div class="heading" id="headoutput2">Collaboration</div>
 		<div class="outputcontent" id="output2"></div>
-	<div class="heading">Compassion</div>
+	<div class="heading" id="headoutput3">Compassion</div>
 		<div class="outputcontent" id="output3"></div>
-	<div class="heading">Learning</div>
+	<div class="heading" id="headoutput4">Learning</div>
 		<div class="outputcontent" id="output4"></div>
-	<div class="heading">Speed</div>
+	<div class="heading" id="headoutput5">Speed</div>
 		<div class="outputcontent" id="output5"></div>
+<!-- Change of focus of values -->
+	<div class="headingmain">CLASIC Core Values that you should focus on inculcating</div>
+	<div class="headingsub" id="lessheading">Congratulations. You have all the right qualities.</div>
+	<div class="heading" id="headdoutput0">Innovation</div>
+		<div class="outputcontent" id="doutput0"></div>
+	<div class="heading" id="headdoutput1">Accountability</div>
+		<div class="outputcontent" id="doutput1"></div>
+	<div class="heading" id="headdoutput2">Collaboration</div>
+		<div class="outputcontent" id="doutput2"></div>
+	<div class="heading" id="headdoutput3">Compassion</div>
+		<div class="outputcontent" id="doutput3"></div>
+	<div class="heading" id="headdoutput4">Learning</div>
+		<div class="outputcontent" id="doutput4"></div>
+	<div class="heading" id="headdoutput5">Speed</div>
+		<div class="outputcontent" id="doutput5"></div>
+	<br><br>
+	<!-- Chart -->
+	<div id="scorechart">Your CLASIC Strength Finder Score Chart</div>
+	<canvas id="myChart"></canvas>
 </div>
 
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>

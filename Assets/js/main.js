@@ -7,7 +7,7 @@ var table = document.getElementById("disp_table");
 var toolans = []; //Stores the answers submitted by user
 var x=[1,9,17,25,32,38]; //Starting(included) point of category
 var y=[8,16,24,31,37,43]; //Ending(included) point of category
-var z=["Innovation","Accountability","Collaboration","Compassion","Learning","Speed"];
+var z=["Innovation","Accountability","Collaboration","Compassion","Learning","Speed"]; //All the headings will be replaced by score out of 5
 // Output value when threshold is more than 4
 var zmore=[`Innovation is a Core value you  highly identfy with.<br>
             What Does Innovation  mean at At BCCL:<br>
@@ -91,27 +91,27 @@ var zmore=[`Innovation is a Core value you  highly identfy with.<br>
             <li>Prioritize critical tasks and finish them first; develop contingency plans. Simplify work. Do more with less. 
             <li>As a manger, Empower people to act because people closest to the task can respond quickest. Develop internal SLAs to ensure everyone is aligned to serve the customer needs"
             `];
-var zless=[`Innovation  is a Core Value you should focus on exhibiting more<br>
-            What Does Innovation  mean at At BCCL:<br>
+var zless=[`Innovation  is a Core Value you should focus on exhibiting more.<br><br>
+            What Does Innovation  mean at At BCCL?<br>
             Innovation  is exhibited by
             <ol>
                 <li>Generating ideas that are new, different and better
                 <li>Putting creative ideas into practice
                 <li>Accepting new ideas, challenges and change initiatives
             </ol>
-            How Can you imbibe this Core  value:
+            <strong>How Can you imbibe this Core value:</strong>
             <ol>
             <li>Ask yourself "What can I learn from the best in my area of work? What will work? what needs tweaking?"
             <li>If you get an outlandish idea, log it into  Eureka  . As a manger, Build a culture of asking questions. Every time you receive any output, ask the person “Is there a different and better way to do it?”
             </ol>
-            Derailers you must watch out for :
+            <strong>Derailers you must watch out for :</strong>
             <ol>
                 <li>Questioning everything, but not providing any solutions. This behaviour, if not checked, leads to constant cribbing and disengagement
                 <li>Defensive behaviour. Such behaviour discourages new ideas and will block innovation.
             </ol>
             `,
-           `Accountability & Risk Taking  is a Core Value you should focus on exhibiting more<br>
-           What Does Accountability & Risk Taking mean at At BCCL:<br>
+           `Accountability & Risk Taking  is a Core Value you should focus on exhibiting more.<br><br>
+           What Does Accountability & Risk Taking mean at At BCCL?<br>
            Accountability & Risk Taking  is exhibited by
            <ol>
            <li>Holding self and others accountable to meet commitments
@@ -119,7 +119,7 @@ var zless=[`Innovation  is a Core Value you should focus on exhibiting more<br>
            <li>Establishing processes for monitoring and measuring results
            <li>Ensuring that feedback loops are effective
            </ol>
-           How Can you imbibe this Core  value:
+           <strong>How Can you imbibe this Core value:</strong>
            <ol>
            <li>Keep others informed of your work to solicit suggestions, and allow them to caution if you get too adventurous.
            <li>As a manager,
@@ -128,28 +128,28 @@ var zless=[`Innovation  is a Core Value you should focus on exhibiting more<br>
                 <li>Share regular feedback on performance and ask for feedback about your managerial style.
             </ul>
            </ol>
-           Derailers you must watch out for :
+           <strong>Derailers you must watch out for :</strong>
            <ul>
            <li>saying "It’s Not My Job" : When people know that something needs to be done to get the result, but thier behaviour is that of acute avoidance of getting involved. 
            <li>Confusion/Tell Me What to Do : citing  confusion as a way of alleviating themselves of their accountability. If they don’t understand the problem or the situation, surely they can’t be expected to do anything about it."
            </ul>
            `,
-           `Collaboration is a Core Value you could focus on exhibting more<br>
-           What Does Collaboration mean at At BCCL:<br>
+           `Collaboration is a Core Value you could focus on exhibting more.<br><br>
+           What Does Collaboration mean at At BCCL?<br>
            Collaboration is exhibited by 
            <ol>
            <li>building partnerships with others to meet shared objectives
            <li>developing the ability to recognise and respect the value that different perspectives bring to BCCL.
            </ol>
-           How You can imbibe this Core  value :
+           <strong>How Can you imbibe this Core value:</strong>
            <ol>
            <li>Develop a style of communication that maintains self-esteem of others
            <li>As a manager, Listen more and ask questions to understand better
            Derailers you must watch out for :<br>
            Not listening to views that are different from ours. When we do this repeatedly, it kills diversity in viewpoints and gives rise to Groupthink behaviour. 
            `,
-           `Compassion and care  is a Core Value you should focus on exhibiting more<br>
-           What Does Compassion and care   mean at At BCCL:<br>
+           `Compassion and care  is a Core Value you should focus on exhibiting more.<br><br>
+           What Does Compassion and care   mean at At BCCL?<br>
            Compassion and Care  is exhibited by
            <ol> 
            <li>Balancing emotional and caring responses with reason, logic, and reality in all decisions
@@ -157,10 +157,10 @@ var zless=[`Innovation  is a Core Value you should focus on exhibiting more<br>
            <li>Listening to others and acknowledging feelings behind the words; being considerate even when taking tough calls
            <li>Working on creating a positive work environment where people can flourish
            </ol>
-           How Can you imbibe this Core  value:<br>
-           Use positive words in your communication. Lend a helping hand whenever we can<br>
-           Derailers you must watch out for :<br>
-           Arrogant and rude behaviour. When we indulge in a behaviour that is not respectful, we create unfavourable image of ourselves and our organizations.
+           <strong>How Can you imbibe this Core value:</strong>
+           &nbsp;&nbsp;Use positive words in your communication. Lend a helping hand whenever you can.<br><br>
+           <strong>Derailers you must watch out for :</strong>
+           &nbsp;&nbsp;Arrogant and rude behaviour. When we indulge in a behaviour that is not respectful, we create unfavourable image of ourselves and our organizations.
            `,
            `Learning Agility is a Core Value you should focus on exhibiting more<br>
            What Does Learning Agility mean at At BCCL:<br>
@@ -169,26 +169,25 @@ var zless=[`Innovation  is a Core Value you should focus on exhibiting more<br>
            <li>learning actively through experimentation when tackling new problems using both successes and failures as  fodder
            <li>Striving to continuously improve and expand new skills and perspectives 
            </ol>
-           How Can you imbibe this Core  value:
+           <strong>How Can you imbibe this Core value:</strong>
            <ol>
            <li>Write a Failure Resume - Note all instances where you were not successful and ask yourself what could i have done differrently.
            <li>As a manager, identify experts in your team to teach each other 
            </ol>
-           Derailers you must watch out for :<br>
-           Questioning everything but not providing a solution !
+           <strong>Derailers you must watch out for :</strong>
+           &nbsp;&nbsp;Questioning everything but not providing a solution !
            `,
-           `Speed  is a Core Value you should focus on exhibiting more<br>
-           What Does Speed mean at At BCCL:<br>
+           `Speed  is a Core Value you should focus on exhibiting more.<br><br>
+           What Does Speed mean at At BCCL?<br>
            Speed  is exhibited by 
            <ol>
            <li>Acting with a sense of purposeful urgency
            <li>Recognising that  speed and responsiveness as source of competitive advantage
            <li>Collaborating effectively in unstructured or dynamic environment
            </ol>
-           How Can you imbibe this Core  value:<br>
-           Respect deadlines. They are not lifelines that can be stretched every time. As a manager, Empower people to act because people closest to the task can respond quickest.
-           <br>
-           Derailers you must watch out for :
+           <strong>How Can you imbibe this Core  value:</strong>
+           &nbsp;&nbsp;Respect deadlines. They are not lifelines that can be stretched every time. As a manager, Empower people to act because people closest to the task can respond quickest.<br>
+           <strong>Derailers you must watch out for :</strong>
            <ul>
            <li><strong>Procrastinating :</strong> People who wait too long for things to happen cause harm to the organization and themselves
            <li><strong>Paralysis of Analysis :</strong> Over planning causes us to respond slowly and become reactive
@@ -214,13 +213,14 @@ function sbtgnt(){
         if(strUser!=0)
         {
             toolans.push(strUser); //Append in the array
+            e.setAttribute("style","background-color: none;");
         }
         else{
-            e.setAttribute("style","background-color: yellow;");
-            unfilled=1;
+            e.setAttribute("style","background-color: #F8BBD0;");
+            unfilled++;
         }
     }
-    if(unfilled=1)
+    if(unfilled!=0)
         {
             toolans.length=0; //Empty the array.
             alert("Please answer all the questions."); //Raise alert to select all answers before submitting.
@@ -230,10 +230,10 @@ function sbtgnt(){
     // toolans.forEach(function(item, index, array) {
     //     console.log(item, index);
     // });
-    calc();
-    comp();
-    change();
-    topFunction();
+    calc(); //Calculate the average
+    comp(); //Compare and give corresponding output
+    change(); //Hide the table and show output
+    topFunction(); //Go to top of page
 
 }
 // Average calculator
@@ -254,11 +254,17 @@ function comp(){
     {
         if (z[j] > 4) //original is >
         {
+            document.getElementById("moreheading").setAttribute("style","display: none;");
+            document.getElementById(`${"headoutput"+j}`).setAttribute("style","display: grid;");
+            document.getElementById(`${"output"+j}`).setAttribute("style","display: grid;");
             document.getElementById(`${"output"+j}`).innerHTML=zmore[j];
         }
         else if (z[j] < 4) //original is <
         {
-            document.getElementById(`${"output"+j}`).innerHTML=zless[j];
+            document.getElementById("lessheading").setAttribute("style","display: none;");
+            document.getElementById(`${"headdoutput"+j}`).setAttribute("style","display: grid;");
+            document.getElementById(`${"doutput"+j}`).setAttribute("style","display: grid;");
+            document.getElementById(`${"doutput"+j}`).innerHTML=zless[j];
         }
         else
         {
@@ -276,6 +282,7 @@ function topFunction() {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
+//Submit the form to start the test button
 function fmbtn()
 {   
     // Get the values entered in the form
@@ -301,14 +308,49 @@ function fmbtn()
 
 }
 
+// Chart Script
 
-// SO what to insert?
+var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Innovation","Accountability","Collaboration","Compassion","Learning","Speed"],
+        datasets: [{
+            label: 'CLASIC Score',
+            data: z,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+                    ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero:true
+                            }
+                        }]
+                    }
+                }
+            });
 
-// email
-// gender
-// age
-// location
-// dfunction
-// designation
-// toolans
 
+// What to do with backend
+
+// email is a var which must be submitted
+// email should be used to get other data from TOI Database
+// z is a var which must be submitted
